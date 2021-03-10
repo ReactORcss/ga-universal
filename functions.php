@@ -179,6 +179,17 @@ function enqueue_universal_style() {
 
 add_action( 'wp_enqueue_scripts', 'enqueue_universal_style' );
 
+//Настройка виджета с тегами, изменяем настройки
+add_filter( 'widget_tag_cloud_args', 'edit_widget_tag_cloud_args');
+function edit_widget_tag_cloud_args($args) {
+	$args['unit'] = 'px';
+	$args['smallest'] = '14';
+	$args['largest'] = '14';
+	$args['number'] = '11';
+	$args['orderby'] = 'count';
+	return $args;
+}
+
 ## отключаем создание миниатюр файлов для указанных размеров
 add_filter( 'intermediate_image_sizes', 'delete_intermediate_image_sizes' );
 function delete_intermediate_image_sizes( $sizes ){

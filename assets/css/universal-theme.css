@@ -385,12 +385,10 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding-top: 30px;
-  padding-bottom: 30px;
 }
 
 .article-grid {
-  width: 74%;
+  width: 95%;
   margin: 30px 0;
   padding: 0;
   list-style: none;
@@ -726,4 +724,63 @@ body {
   font-size: 12px;
   line-height: 15px;
   margin-left: 5px;
+}
+
+.sidebar-front-page {
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.widget-downloader {
+  background: #3BBDC4 url("../images/file.svg") no-repeat top 22px right 24px;
+  border-radius: 10px;
+  color: #ffffff;
+  padding: 25px;
+  padding-bottom: 55px;
+  position: relative;
+}
+
+.widget-downloader .widget-title {
+  font-family: Roboto Slab;
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.widget-downloader .widget-link {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding-top: 12px;
+  padding-bottom: 13px;
+  border-top: 1px solid rgba(255, 255, 255, 0.75);
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Lato Black', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.widget-downloader .widget-link-icon {
+  margin-right: 10px;
+}
+
+.widget-downloader .description {
+  color: #C1F4F5;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
 }

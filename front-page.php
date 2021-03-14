@@ -125,6 +125,7 @@
                     $query = new WP_Query( [
                         //получаем 7 постов
                         'posts_per_page' => 7,
+                        'category__not_in' => 32,
                     ] );
                     
                     //проверяем, есть ли посты
@@ -238,3 +239,29 @@
     <?php get_sidebar(); ?>
     </div>
 </div>
+<?php		
+global $post;
+
+$query = new WP_Query( [
+	'posts_per_page' => 1,
+	'category_name' => 'investigation',
+] );
+
+if ( $query->have_posts() ) {
+	while ( $query->have_posts() ) {
+		$query->the_post();
+		?>
+		<section class="investigation" style="background: linear-gradient(0deg, rgba(64, 48, 61, 0.35), rgba(64, 48, 61, 0.35)), url(<?php echo get_the_post_thumbnail_url()?>) no-repeat center center">
+            <div class="container">
+                <h2 class="investigation-title"><?php the_title()?></h2>
+                <a href="<?php echo get_the_permalink() ?>" class="more">Читать статью</a>
+            </div>
+        </section>
+		<?php 
+	}
+} else {
+	// Постов не найдено
+}
+
+wp_reset_postdata(); // Сбрасываем $post
+?>

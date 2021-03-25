@@ -53,6 +53,29 @@ function universal_theme_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Меню в подвале', 'universal-example' ),
+			'id'            => 'sidebar-footer',
+			'description'   => esc_html__( 'Добавьте меню сюда.', 'universal-example' ),
+			'before_widget' => '<section id="%1$s" class="footer-menu %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="footer-menu-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Текст в подвале', 'universal-example' ),
+			'id'            => 'sidebar-footer-text',
+			'description'   => esc_html__( 'Добавьте текст сюда.', 'universal-example' ),
+			'before_widget' => '<section id="%1$s" class="footer-text %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '',
+			'after_title'   => '',
+		)
+	);
+	
 }
 add_action( 'widgets_init', 'universal_theme_widgets_init' );
 
@@ -350,6 +373,7 @@ class Social_Widget extends WP_Widget {
 		if ( ! empty( $title ) ) {
 			echo $args['before_title'] . $title . $args['after_title'];
 		}
+		echo '<div class="widget-social-wrapper">';
 		if ( ! empty( $social_link_fb ) ) {
 			echo '<a class="widget-social-icon" href="' . $social_link_fb . '"><img class="widget-social-icon" src="' . get_template_directory_uri(). '/assets/images/facebook.svg">
 			</a>';
@@ -366,6 +390,7 @@ class Social_Widget extends WP_Widget {
 			echo '<a class="widget-social-icon" href="' . $social_link_fb . '"><img class="widget-social-icon" src="' . get_template_directory_uri(). '/assets/images/facebook.svg">
 			</a>';
 		}
+		echo '</div>';
 		echo $args['after_widget'];
 	}
 

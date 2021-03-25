@@ -59,3 +59,31 @@
   cursor: pointer
   svg
     fill: #BCBFC2
+@media screen and ( max-width: 1200px )
+  .digest
+    width: 67%
+    &-thumb
+      max-width: 250px
+    &-title
+      max-width: 280px
+      font-size: 18px
+@media screen and ( max-width: 1024px )
+  .digest
+    &-item
+      flex-direction: column
+    &-thumb
+      max-width: 100%
+      width: 100%
+      height: 250px
+      margin-bottom: 20px
+@media screen and ( max-width: 960px )
+  .favourites
+    flex-wrap: wrap
+  .digest
+    width: 100%
+    margin-bottom: 30px
+    &-item
+      justify-content: flex-start
+      align-items: flex-start
+    &-info
+      width: 100%

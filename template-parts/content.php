@@ -8,7 +8,8 @@
             echo get_template_directory_uri() . '/assets/images/img-default.png';
         } ?>);">
 	<div class="container">
-			<div class="post-header-nav">
+		<div class="post-header-wrapper">
+		<div class="post-header-nav">
 			<?php
 				foreach (get_the_category() as $category) {
 				printf(
@@ -79,8 +80,24 @@
 					<span class="likes-counter"><?php comments_number('0', '1', '%')?></span>
 				</div>
 			</div>
-	</div>	
-					
+			<div class="post-author">
+				<div class="post-author-info">
+				<?php $author_id = get_the_author_meta('ID'); ?>
+                    <img src="<?php echo get_avatar_url($author_id)?>" alt="" class="post-author-avatar">
+                        <span class="post-author-name"><?php the_author()?></span>
+                        <span class="post-author-rank">Должность</span>
+						<span class="post-author-posts">
+							<?php plural_form(
+							count_user_posts($author_id),
+							/* варианты написания для количества 1, 2 и 5 */
+							array('статья','статьи','статей')) ?></span>
+				</div>
+				<a href="<?php echo get_author_posts_url($author_id)?>" class="post-author-link">
+					Страница автора
+				</a>
+			</div>
+		</div>	
+	</div>		
 	</header><!-- шапка поста -->
     <!-- Содержимое поста -->
     <div class="entry-content">
@@ -100,7 +117,6 @@
 				wp_kses_post( get_the_title() )
 			)
 		);
-
 		wp_link_pages(
 			array(
 				'before' => '<div class="page-links">' . esc_html__( 'Страницы:', 'universal-example' ),
@@ -108,6 +124,9 @@
 			)
 		);
 		?>
+		<blockquote class="wp-block-quote">
+          <p>Таким образом консультация с широким активом способствует подготовки и реализации направлений прогрессивного развития. Не следует, однако забывать, что новая модель организационной деятельности в значительной степени обуславливает.</p>
+        </blockquote>
 	</div><!-- содержимое поста -->
     <!-- Подвал поста -->
     <footer class="entry-footer">

@@ -8,12 +8,12 @@
             // находим шаблон для вывода поста в папке template_parts
 			get_template_part( 'template-parts/content', get_post_type() );
             //Выводим ссылки на предыдущий и следующий посты
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Назад', 'universal-example' ) . '</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Вперёд:', 'universal-example' ) . '</span>',
-				)
-			);
+			// the_post_navigation(
+			// 	array(
+			// 		'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Назад', 'universal-example' ) . '</span>',
+			// 		'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Вперёд:', 'universal-example' ) . '</span>',
+			// 	)
+			// );
 			// Если комментарии к записи открыты, выводим комментарии
 			if ( comments_open() || get_comments_number() ) :
                 //Находим файл comments.php и выводим комментарии

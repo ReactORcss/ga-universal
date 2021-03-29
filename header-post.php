@@ -6,13 +6,22 @@
     <title>Universal</title>
     <?php wp_head(); ?>
 </head>
+
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<header class="header">
+<header class="header header-light">
     <div class="container">
     <div class="header-wrapper">
     
     <?php
+
+    if( has_custom_logo() ){
+        echo '<div class="logo">' . get_custom_logo() . 
+        '<span class="logo-name">' . get_bloginfo('name') . '</span></div>';
+    } else {
+        echo '<span class="logo-name">' . get_bloginfo('name') . '</span>';
+    }
+
     wp_nav_menu( [
         'theme_location'  => 'header_menu',
         'container'       => 'nav', 

@@ -13,12 +13,12 @@
     <div class="header-wrapper">
     <?php
         if( has_custom_logo() ){
-	        the_custom_logo();
+            echo '<div class="logo">' . get_custom_logo() . 
+            '<span class="logo-name">' . get_bloginfo('name') . '</span></div>';
         } else {
-            echo 'Universal';
+            echo '<span class="logo-name">' . get_bloginfo('name') . '</span>';
         }
-    ?>
-    <?php
+
     wp_nav_menu( [
         'theme_location'  => 'header_menu',
         'container'       => 'nav', 
@@ -26,6 +26,7 @@
         'menu_class'      => 'header-menu', 
         'echo'            => true,
     ] );
+    
     echo get_search_form(); ?>
     <a href="" class="header-menu-toggle">
         <span></span>

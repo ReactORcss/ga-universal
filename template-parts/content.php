@@ -127,15 +127,17 @@
 		<blockquote class="wp-block-quote">
           <p>Таким образом консультация с широким активом способствует подготовки и реализации направлений прогрессивного развития. Не следует, однако забывать, что новая модель организационной деятельности в значительной степени обуславливает.</p>
         </blockquote>
-	</div><!-- содержимое поста -->
-    <!-- Подвал поста -->
-    <footer class="entry-footer">
+		<footer class="entry-footer">
         <?php
             $tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'universal-theme' ) );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
 				printf( '<span class="tags-links">' . esc_html__( '%1$s', 'universal-theme' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
-            ?>
-	</footer><!-- .entry-footer -->
+			//Поделиться в соцсетях
+			meks_ess_share(); 
+        ?>
+		</footer><!-- .entry-footer -->
+	</div><!-- содержимое поста -->
+    <!-- Подвал поста -->
 </article>

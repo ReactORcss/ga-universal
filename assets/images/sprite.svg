@@ -32,4 +32,7 @@
   <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 28" id="bookmark">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5.5h15a3 3 0 013 3v24L11.142 20 .5 27.5v-24a3 3 0 013-3z"></path>
   </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" id="pencil">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 14.2V18h3.8l11-11.1L11 3.1 0 14.2zM17.7 4c.4-.4.4-1 0-1.4L15.4.3c-.4-.4-1-.4-1.4 0l-1.8 1.8L16 5.9 17.7 4z"></path>
+  </symbol>
 </svg>

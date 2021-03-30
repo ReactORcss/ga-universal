@@ -1874,6 +1874,66 @@ body {
   margin-bottom: 25px;
 }
 
+.footer-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 70px;
+}
+
+.footer-form-wrapper {
+  max-width: 760px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer-form-title {
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 50px;
+  color: #262D33;
+  margin-bottom: 25px;
+}
+
+.footer-form input {
+  margin-right: 10px;
+  padding: 10px 15px;
+  border: 1px solid #d9dadb;
+  border-radius: 5px;
+  min-width: 313px;
+}
+
+.footer-form button {
+  background: #4592FF;
+  border-radius: 20px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 20px;
+  color: #fff;
+  padding: 10px 25px;
+  border: none;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 1024px) {
   .footer-menu {
     -ms-flex-preferred-size: 30%;

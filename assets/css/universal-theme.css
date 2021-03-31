@@ -139,6 +139,7 @@ body {
   border-radius: 10px;
   border: none;
   padding: 10px 25px;
+  color: #111;
 }
 
 .search-form input::-webkit-input-placeholder {
@@ -265,7 +266,7 @@ body {
   }
 }
 
-.home {
+body {
   background-color: #E5E5E5;
 }
 
@@ -949,125 +950,6 @@ body {
   margin-left: 5px;
 }
 
-.container2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 1140px;
-  margin: auto;
-  margin-top: 30px;
-}
-
-.container2 .digest {
-  margin-top: 30px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 0 25px;
-}
-
-.container2 .digest-wrapper {
-  width: 95%;
-  margin-top: 30px;
-}
-
-.container2 .favourites {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-bottom: 30px;
-}
-
-.container2-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 25px 0;
-}
-
-.container2-item:not(:last-child) {
-  border-bottom: 1px solid #D9DADB;
-}
-
-.container2-item-permalink {
-  text-decoration: none;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-}
-
-.container2-thumb {
-  width: 336px;
-  height: 195px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  margin-right: 25px;
-}
-
-.container2-info {
-  position: relative;
-  width: 100%;
-}
-
-.container2-title {
-  font-family: Roboto Slab;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 25px;
-  color: #262D33;
-  margin-top: 15px;
-  margin-bottom: 10px;
-  max-width: 400px;
-}
-
-.container2-excerpt {
-  margin: 0 0 20px;
-}
-
-.container2-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.container2-date, .container2-likes, .container2-comments {
-  margin-right: 11px;
-  color: #939699;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.bookmark {
-  background-color: transparent;
-  border: none;
-  position: absolute;
-  right: 0;
-  top: 0;
-  cursor: pointer;
-}
-
-.bookmark svg {
-  fill: #BCBFC2;
-}
-
 @media screen and (max-width: 1200px) {
   .article-grid {
     -ms-grid-columns: (minmax(40%, 1fr))[auto-fit];
@@ -1109,7 +991,6 @@ body {
 .sidebar-front-page {
   width: 23%;
   margin-left: 30px;
-  margin-top: 30px;
 }
 
 .widget {
@@ -2562,4 +2443,68 @@ body {
 .comment-submit {
   margin-left: 95px;
   margin-top: 15px;
+}
+
+.pagination .nav-links {
+  margin-top: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 75px;
+}
+
+.pagination .nav-links * {
+  padding: 17px;
+  text-decoration: none;
+  font-family: "Lato Black";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 20px;
+  color: #262d33;
+  text-align: center;
+}
+
+.pagination .nav-links *:not(:last-child) {
+  border-right: 1px solid #D9DADB;
+}
+
+.pagination .nav-links .prev {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 17px 70px;
+  margin-right: auto;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.pagination .nav-links .next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 17px 70px;
+  margin-left: auto;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.pagination-prev-icon {
+  fill: #BCBFC2;
 }

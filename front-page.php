@@ -125,10 +125,11 @@
             <a class="article-permalink" href="<?php echo get_the_permalink()?>">
                     <h4 class="article-title"><?php echo mb_strimwidth(get_the_title(), 0, 50, '...')?></h4> <!-- обрезаем article до 50 символов-->
             </a>
-            <img width="65" height="65" src="<?php if(has_post_thumbnail()) { echo get_the_post_thumbnail_url( null, 'homepage-thumb' );
+            <img width="65" height="65" src="<?php if(has_post_thumbnail()) { 
+                echo get_the_post_thumbnail_url( null, 'thumb' );
             }
             else {
-                echo get_template_directory_uri() . '/assets/images/img-default.png';
+                echo get_template_directory_uri() . '/assets/images/img-default.jpg';
             } ?>" alt="">
         </li>
             <?php 

@@ -2628,12 +2628,13 @@ body {
   margin-bottom: 27px;
 }
 
-.page-text {
+.contacts-title {
   font-family: Lato;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 30px;
+  margin-bottom: 28px;
 }
 
 .contacts-wrapper {
@@ -2645,11 +2646,25 @@ body {
           align-items: flex-start;
 }
 
-.contacts-form {
+.contacts-wrapper .left {
+  margin-right: 80px;
+}
+
+.contacts-wrapper .right a, .contacts-wrapper .right address {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.85);
+  font-style: normal;
+  margin-bottom: 15px;
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.wpcf7-form {
   max-width: 460px;
 }
 
-.contacts-form input {
+.wpcf7-form input {
   width: 100%;
   padding: 10px 15px;
   font-family: Lato;
@@ -2668,7 +2683,7 @@ body {
   height: 40px;
 }
 
-.contacts-form textarea {
+.wpcf7-form textarea {
   padding: 10px 15px;
   font-family: Lato;
   font-style: normal;
@@ -2684,4 +2699,9 @@ body {
 
 .partnership-title {
   color: blue;
+}
+
+.lesson-header {
+  padding: 80px 0;
+  color: #fff;
 }

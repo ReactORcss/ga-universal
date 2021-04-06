@@ -5,7 +5,7 @@
 		if(has_post_thumbnail()) { echo get_the_post_thumbnail_url();
         }
         else {
-            echo get_template_directory_uri() . '/assets/images/img-default.png';
+            echo get_template_directory_uri() . '/assets/images/img-default.img';
         } ?>);">
 	<div class="container">
 		<div class="post-header-wrapper">

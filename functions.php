@@ -24,7 +24,7 @@ if ( ! function_exists( 'universal_theme_setup' ) ) :
         add_theme_support( 'title-tag' );
 
         // Добавление миниатюр
-        add_theme_support( 'post-thumbnails', array( 'post' ) );
+        add_theme_support( 'post-thumbnails' );
 
         // Добавление пользовательского логотипа
         add_theme_support( 'custom-logo', [
@@ -417,7 +417,7 @@ class Recent_Posts_Widget extends WP_Widget {
 	}
 
 	// скрипт виджета
-	function add_downloader_widget_scripts() {
+	function add_recent_posts_widget_scripts() {
 		// фильтр чтобы можно было отключить скрипты
 		if( ! apply_filters( 'show_my_widget_script', true, $this->id_base ) )
 			return;
@@ -428,13 +428,13 @@ class Recent_Posts_Widget extends WP_Widget {
 	}
 
 	// стили виджета
-	function add_downloader_widget_style() {
+	function add_recent_posts_widget_style() {
 		// фильтр чтобы можно было отключить стили
 		if( ! apply_filters( 'show_my_widget_style', true, $this->id_base ) )
 			return;
 		?>
 		<style type="text/css">
-			.downloader_widget a{ display:inline; }
+			.recent_posts_widget_widget a{ display:inline; }
 		</style>
 		<?php
 	}
